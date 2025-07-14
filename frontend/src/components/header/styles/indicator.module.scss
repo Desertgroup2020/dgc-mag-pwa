@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+
+.indicator_section {
+  display: flex;
+  gap: 0.9375rem;
+  align-items: center;
+  margin-right: 1rem;
+
+  & :global(.wishlist) {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--popover-foreground);
+      position: absolute;
+      right: -5px;
+      top: -4px;
+      opacity: 0;
+    }
+    &:global(.active){
+        &::before{
+            opacity: 1;
+        }
+    }
+  }
+  & :global(.cart_icon_section) {
+    display: flex;
+    gap: 0.25rem;
+    & :global(.cart_price_text) {
+      border: 1px solid #bebebe;
+      padding: 0.25rem 0.5rem;
+      border-radius: 25px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+  }
+}
