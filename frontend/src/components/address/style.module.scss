@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.address_form{
+    & :global(.row){
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        & > :global(.col){
+            flex-basis: 50%;
+            max-width: 50%;
+            padding: 0 5px;
+
+            @include mobile(){
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+    & :global(.input_grup){
+        &:global(.checkbox){
+            label{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        & :global(.error){
+            text-align: right;
+        }
+        & :global(.country_select.region){
+            & :global(.region_search_input_wrap){
+                width: 100%;
+                position: relative;
+                input[type=text]{
+                    &::placeholder{
+                        color: inherit;
+                    }
+                }
+                & :global(.progress){
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                }
+            }            
+        }
+    }
+}
