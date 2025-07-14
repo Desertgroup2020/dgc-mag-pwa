@@ -1,0 +1,25 @@
+.otp_modal_cnts {
+    // min-width: 640px;
+  & :global(.head) {
+    margin-bottom: 1.875rem;
+    h3 {
+      margin-bottom: 0.3em;
+    }
+    p{
+        color: #444;
+        &>span{
+            font-weight: bold;
+        }
+        &>button{
+            color: var(--card-foreground);
+            font-weight: var(--weight_bold);
+        }
+    }
+  }
+  & :global(.otp_sec){
+    margin-bottom: 2.5rem;
+    & :global(.resend){
+        margin-top: 1.875rem;
+    }
+  }
+}
