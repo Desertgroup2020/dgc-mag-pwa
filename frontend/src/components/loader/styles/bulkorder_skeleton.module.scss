@@ -1,0 +1,70 @@
+@import "../../../styles/variables.scss";
+
+
+.bulkorder_skeleton{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+
+  @include mobile(){
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  & :global(.label_input_skeleton){
+    margin-bottom: 25px;
+    & :global(.label_skeleton){
+      width: 100%;
+      height: 24px;
+      max-width: 120px;
+      border-radius: 1.875rem;
+      background-color: #e4e5e7;
+      margin-bottom: 1rem;
+
+      @include mobile(){
+        height: 21px;
+      }
+    }
+    & :global(.label_skeleton_2){
+      width: 100%;
+      height: 24px;
+      max-width: 230px;
+      border-radius: 1.875rem;
+      background-color: #e4e5e7;
+      margin-bottom: 1rem;
+
+      @include mobile(){
+        height: 21px;
+      }
+    }
+    & :global(.input_skeleton){
+      width: 100%;
+      height: 60px;
+      border-radius: 1.875rem;
+      background-color: #e4e5e7;
+
+      @include ipadpro(){
+        height: 54px;
+      }
+
+      @include mobile(){
+        height: 46px;
+      }
+    }
+  }
+
+  & :global(.send_button_skeleton){
+    width: 100%;
+    height: 60px;
+    border-radius: 1.875rem;
+
+    @include hd(){
+      height: 54px;
+    }
+
+    @include mobile(){
+      height: 46px;
+    }
+  }
+}
