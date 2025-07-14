@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+
+.details_review_skeleton{
+  & :global(.button_container_skeleton){
+    padding-bottom: 1rem;
+  }
+
+  & :global(.review_section_skeleton){
+    height: 14.519rem;
+    display: flex;
+    justify-content: start;
+    border: 1px solid #cacaca;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+
+    & :global(.left_skeleton){
+      padding: 20px;
+      padding-left: 0px;
+
+      & :global(.name_skeleton){
+        width: 133.94px;
+        height: 27px;
+        background-color: #e4e5e7;
+        margin-bottom: 10px;
+      }
+
+      & :global(.date_skeleton){
+        width: 133.94px;
+        height: 16.8px;
+        background-color: #e4e5e7;
+      }
+    }
+
+    & :global(.right_skeleton){
+      padding: 20px;
+      padding-left: 0px;
+      & :global(.title_skeleton){
+        width: 133.94px;
+        height: 27px;
+        background-color: #e4e5e7;
+        margin-bottom: 10px;
+      }
+
+      & :global(.content_skeleton){
+        background-color: #e4e5e7;
+        height: 155px;
+        width: 100%;
+      }
+    }
+    
+    
+  }
+}
