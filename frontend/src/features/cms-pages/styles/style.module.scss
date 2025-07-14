@@ -1,0 +1,84 @@
+@import "../../../styles/variables.scss";
+
+.cms_page {
+  padding: 3.75rem 0 3.75rem;
+
+  &:global(.about-us) {
+    padding-top: 0;
+    & :global(.container) {
+      max-width: 100%;
+      padding: 0;
+    }
+    img {
+      display: inline;
+    }
+  }
+
+  img[data-element="desktop_image"] {
+    @include mobile() {
+      display: none;
+    }
+  }
+  img[data-element="mobile_image"] {
+    display: none;
+
+    @include mobile() {
+      display: inline;
+    }
+  }
+  div[data-content-type="text"] {
+    word-wrap: break-word;
+  }
+  & :global(.pagebuilder-column-group) {
+    @include ipad() {
+      padding: 0 1.25rem;
+    }
+  }
+  & :global(.pagebuilder-column) {
+    box-sizing: border-box;
+    @include ipad() {
+      flex-wrap: wrap;
+      background-attachment: scroll !important;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  & :global(.pagebuilder-column-line) {
+    @include ipad() {
+      flex-wrap: wrap;
+    }
+  }
+
+  // enquiry
+  & :global(.about_enquiry) {
+    text-align: center;
+    margin-top: 1.875rem;
+
+    & :global(.btn_action_green_rounded) {
+      min-width: 220px;
+      position: fixed;
+      bottom: 1.875rem;
+      left: 50%;
+      transform: translateX(-50%);
+      // transition: transform none;
+
+      &:global(.stay) {
+        position: relative;
+        transform: unset;
+        left: unset;
+        bottom: unset;
+      }
+    }
+    
+  }
+}
+.enquiry_form {
+  max-height: 70vh;
+  padding: 0 2.8125rem;
+  overflow-y: auto;
+
+  h2{
+    margin-bottom: .9375rem;
+    text-align: center;
+  }
+}
