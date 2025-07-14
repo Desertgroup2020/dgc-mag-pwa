@@ -1,0 +1,18 @@
+@import "../../../styles/variables.scss";
+
+
+.menu_wrapper{
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0rem;
+    height:auto;
+    width:100%;
+
+    @include hd(){
+        gap: 1.125rem;
+    }    
+    & :global(.menu_title){
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+}
