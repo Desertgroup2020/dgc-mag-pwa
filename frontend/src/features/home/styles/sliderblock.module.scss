@@ -1,0 +1,113 @@
+@import "../../../styles/variables.scss";
+.slider_block {
+  // display: none;
+  & :global(.controls) {
+    width: calc(100vw - 152px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 1.938rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include ipad(){
+      width: calc(100vw - 60px);
+    }    
+
+    @include mobile(){
+      width: 90px;
+      left: unset;
+      right: 0;
+      bottom: 1.25rem;
+    }
+    & :global(.dots) {
+      display: flex;
+      min-width: 80vw;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      @include mobile(){
+        display: none;
+      }
+      & > button {
+        flex: auto;
+        // min-width: 230px;
+        height: 2px;
+        background-color: #fff;
+        opacity: 0.2;
+        flex-shrink: 1;
+        &:global(.active) {
+          opacity: 1;
+        }
+      }
+    }
+    & :global(.nav) {
+      max-width: 19px;
+      transition: 0.3s ease;
+      &:disabled{
+        max-width: 16px;
+      }
+      svg {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+  }
+}
+.slider_card {
+  min-height: calc(100vh - var(--header_menu_height));
+
+  @include ipadpro(){
+    min-height: 50vh;
+  }
+  @include mobileLand(){
+    min-height: 360px;
+  }
+
+  & :global(.slider_img) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  
+  & :global(.content) {
+    // @apply bg-gradiant_slider;
+    // backdrop-filter: blur( 2px );
+    // -webkit-backdrop-filter: blur( 2px );
+    padding: 3rem 0 10rem;
+    top: 1.875rem;
+
+    @include hd() {
+      padding: 3rem 0 8.875rem;
+    }
+    @include mobile(){
+      padding: .725rem 0 1.5625rem;
+    }
+    & :global(.txt) {
+      max-width: 775px;
+
+      @include hd(){
+        max-width: 650px;
+      }
+      @include ipad(){
+        max-width: 600px;
+      }
+      @include mobile(){
+        max-width: 100%;
+      }
+      & :global(.text-h1) {
+        color: #fff;
+      }
+      & :global(.sub_txt) {
+        color: #d3d3d3;
+      }
+      & :global(.btn_action_green_rounded){
+        background-color: #fff;
+        color: #4D926C;
+      }
+    }
+  }
+}
