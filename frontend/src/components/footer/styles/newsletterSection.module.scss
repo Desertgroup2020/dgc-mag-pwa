@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+
+.newsletter_section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & :global(.title) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  & :global(.sub_title) {
+    font-size: 0.75rem;
+  }
+  & :global(.input_wrapper) {
+    display: flex;
+    margin-top: 0.5rem;
+    & :global(.newsletter_input) {
+      outline: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      max-width: 250px;
+      width: 100%;
+      border: 1px solid #dad4d4;
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+      background-color: transparent;
+    }
+    & :global(.newsletter_button) {
+      padding: 0.6rem 2rem;
+      background: #7e8b53;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+  }
+}
