@@ -1,0 +1,72 @@
+@import "../../../styles/variables.scss";
+
+// .service_overview_home {
+//   background-color: var(--popover-foreground);
+//   display: flex;
+//   justify-content: space-between;
+
+//   & :global(.service_bar) {
+//     display: flex;
+//     justify-content: right;
+//     align-items: center;
+//     padding: 2.313rem 0 2.625rem 0;
+//     gap: 1.5rem;
+
+//     & :global(h5) {
+//       font-size: 1.125rem;
+//       color: #fefefe;
+//       font-weight: var(--weight_medium);
+//       max-width: 50%;
+//     }
+//   }
+// }
+.service_overview_home {
+  padding: var(--hom_sec_top_padding) 0 var(--hom_sec_btm_padding);
+
+  // @include mobile(){
+  //   padding: 3.125rem 0 2.375rem;
+  // }
+  & :global(.inner) {
+    background-color: var(--popover-foreground);
+  }
+
+  & :global(.service_flex) {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.313rem 0 2.625rem 0;
+
+    @include mobile(){
+      padding-right: 1.25rem 0;
+    }
+
+    img{
+      @include ipad(){
+        max-width: 70px;
+      }
+      @include mobile(){
+        max-width: 32px;
+      }
+    }
+  }
+
+  & :global(.service_bar) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  & :global(h5) {
+    font-size: 1.125rem;
+    line-height: 1.371rem;
+    color: #fefefe;
+    font-weight: var(--weight_medium);
+    max-width: 50%;
+
+    @include ipad(){
+      font-size: .875rem;
+    }
+    @include mobile(){
+      font-size: .5rem;
+    }
+  }
+}
