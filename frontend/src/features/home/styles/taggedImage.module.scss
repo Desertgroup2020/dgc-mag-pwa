@@ -1,0 +1,222 @@
+@import "../../../styles/variables.scss";
+
+.tagged_img_block {
+  margin: var(--hom_sec_top_padding) 0 var(--hom_sec_btm_padding);
+  padding: var(--hom_sec_btm_padding) 0;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 249, 249, 0.33) 0%,
+    rgba(165, 165, 165, 0.33) 47%,
+    rgba(249, 249, 249, 0.33) 100%
+  );
+  box-shadow: 
+        inset 0px 11px 8px -10px #CCC,
+        inset 0px -11px 8px -10px #CCC; 
+  @include mobile(){
+    padding: var(--hom_sec_top_padding) 0 var(--hom_sec_btm_padding);
+  }
+
+  & :global(.grid) {
+    display: grid;
+    grid-template-columns: 2.3fr 4.4fr 3.3fr;
+    grid-template-rows: repeat(auto-fill, 375px);
+    grid-template-areas:
+      "one two three"
+      "four five three";
+    gap: 16px;
+    @include hd(){
+      grid-template-rows: repeat(auto-fill, 290px);
+    }
+    @include ipadpro() {
+      // grid-template-rows: repeat(auto-fill, 275px);
+      grid-template-columns: 4fr 6fr;
+      grid-template-rows: repeat(auto-fill, 360px);
+      grid-template-areas:
+        "one two"
+        "three four"
+        "five five";
+    }
+    @include ipad(){
+      grid-template-rows: repeat(auto-fill, 290px);
+    }
+
+    @include mobile(){
+      grid-template-rows: repeat(auto-fill, 132px);
+    }
+
+    & :global(.item) {
+      // height: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+    & :global(.item1) {
+      grid-area: one;
+    }
+    & :global(.item2) {
+      grid-area: two;
+      // background-color: blueviolet;
+    }
+    & :global(.item3) {
+      grid-area: three;
+      // background-color: rgb(50, 37, 63);
+
+      @include ipadpro() {
+        height: 360px;
+      }
+      @include ipad() {
+        height: 290px;
+      }
+      @include mobile() {
+        height: 132px;
+      }
+      
+    }
+    & :global(.item4) {
+      grid-area: four;
+      height: 375px;
+      // background-color: orange;
+
+      @include hd(){
+        height: 290px;
+      }
+      @include ipadpro() {
+        height: 360px;
+      }
+      @include ipad(){
+        height: 290px;
+      }
+      @include mobile(){
+        height: 132px;
+      }
+    }
+    & :global(.item5) {
+      // background-color: rgb(88, 71, 39);
+      grid-area: five;
+      height: 375px;
+      @include hd(){
+        height: 290px;
+      }
+      @include ipadpro() {
+        height: 360px;
+      }
+      @include ipad(){
+        height: 290px;
+      }
+      @include mobile(){
+        height: 132px;
+      }
+    }
+
+    &:global(.layout2) {
+      grid-template-columns: 3.3fr 4.4fr 2.3fr;
+      grid-template-areas:
+        "three two one"
+        "three four five";
+
+      @include ipadpro() {
+        grid-template-columns: 6fr 4fr;
+        grid-template-rows: repeat(auto-fill, 360px);
+        grid-template-areas:
+          "two one"
+          "three four"
+          "five five";
+      }
+      @include ipad(){
+        grid-template-rows: repeat(auto-fill, 290px);
+      }
+      @include mobile(){
+        grid-template-rows: repeat(auto-fill, 132px);
+      }
+      & :global(.item1) {
+        grid-area: one;
+        // background-color: aqua;
+      }
+      & :global(.item2) {
+        grid-area: two;
+      }
+      & :global(.item3) {
+        grid-area: three;
+      }
+      & :global(.item4) {
+        grid-area: four;
+        height: 375px;
+
+        @include hd() {
+          height: 290px;
+        }
+        @include ipadpro() {
+          height: 360px;
+        }
+        @include ipad(){
+          height: 290px;
+        }
+        @include mobile(){
+          height: 132px;
+        }
+      }
+      & :global(.item5) {
+        @include mobile(){
+          height: 132px;
+        }
+        grid-area: five;
+      }
+    }
+  }
+
+  & :global(.map_item) {
+    position: relative;
+  }
+
+  & :global(.map_item) {
+    & :global(#img-mapper), & :global(.interactive_map_wrap) {
+      height: 100% !important;
+      width: 100% !important;
+
+      & :global(.img-mapper-img) {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      & :global(.img-mapper-canvas) {
+        // width: 100%;
+        // height: 100%;
+        // width: 100%;
+      }
+    }
+    & :global(.tooltip) {
+      color: #fff;
+      padding: 0.25rem 1.25rem;
+      transform: translateX(-50%);
+      display: block;
+      opacity: 0;      
+      & > span {
+        position: relative;
+        font-size: .875rem;
+        display: block;
+        line-height: 1.5;
+        min-width: 120px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(12px);
+      }
+      &:global(.show) {
+        opacity: 1;
+      }
+    }
+
+    // &:hover{
+    //     & :global(.tooltip) {
+    //         opacity: 1;
+    //     }
+    // }
+  }
+}
