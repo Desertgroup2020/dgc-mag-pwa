@@ -1,0 +1,100 @@
+@import "../../styles/variables.scss";
+
+.product_card {
+    //   max-width: 377px;
+    padding: 4.375rem 1.0625rem 1.875rem 1.0625rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  
+    @include hd(){
+      padding-top: 2.5rem;
+    }
+    @include ipad(){
+      padding: 2.5rem 2.5rem 1.875rem 2.5rem;
+    }
+  
+    & > :global(.prd_img) {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 245px; 
+      // @include mobile(){
+      //   max-height: 125px;
+      // }
+      
+      img {
+        margin: auto;
+        height: 100% !important;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    & > :global(.content_area) {
+      text-align: center;
+      & > :global(.sku) {
+        color: #848484;
+        margin-bottom: 0.5em;
+      }
+      & > h4 {
+        margin-bottom: 0.4em;
+      }
+      & > :global(.price) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.25rem;
+  
+        & > :global(.special) {
+          color: #848484;
+          margin-right: 0.1875rem;
+        }
+      }
+    }
+    & > :global(.action_grup) {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      & > :global(.icon) {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background-color: #efefef;
+        border-radius: 50%;
+        margin-bottom: 0.75rem;
+        transform: translateX(calc(100% + 20px));
+        @include ipad(){
+          transform: translateX(calc(0% + 0px));
+        }
+        &:global(.wishlist) {
+          transition: 0.2s ease-in-out;          
+        }
+        &:global(.backlog) {
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    & > :global(.product_label){
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    &:hover {
+      & > :global(.action_grup) {
+        & :global(.icon) {
+          transform: translateX(0);
+        }
+      }
+    }
+    &:global(.item_odd){
+      background-color: rgba($color: #E9E9E9, $alpha: 35%);    
+      
+    }
+    &:global(.item_even){
+      background-color: rgba($color: #6F6F6F, $alpha: 2%);
+    }
+  }
