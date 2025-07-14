@@ -1,0 +1,1021 @@
+@import "../../../styles/variables.scss";
+
+.sliderblock_skeleton {
+  min-height: calc(100vh - var(--header_menu_height));
+
+  @include ipadpro(){
+    min-height: 40vh;
+  }
+  @include mobileLand(){
+    min-height: 487px;
+  }
+
+  & :global(.skeleton_content) {
+    @apply bg-skeleton_gradiant_slider;
+    // backdrop-filter: blur( 2px );
+    // -webkit-backdrop-filter: blur( 2px );
+    padding: 3rem 0 10rem;
+
+    @include hd() {
+      padding: 3rem 0 8.875rem;
+    }
+    @include mobile(){
+      padding: .725rem 0 1.5625rem;
+    }
+    & :global(.skeleton_txt) {
+      max-width: 775px;
+
+      @include hd(){
+        max-width: 650px;
+      }
+      @include ipad(){
+        max-width: 600px;
+      }
+      @include mobile(){
+        max-width: 100%;
+      }
+
+      & :global(.skeleton_heading){
+        margin-bottom: 37px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        @include hd(){
+          margin-bottom: 24px;
+        }
+        @include ipad(){
+          margin-bottom: 18px;
+        }
+        @include mobile(){
+          margin-bottom: 12.6px;
+        }
+        & :global(.skeleton_line_1){
+          height: 38px;
+          @include mobile(){
+           height: 28px;
+          }
+        }
+        & :global(.skeleton_line_2){
+          height: 38px;
+          width: 60%;
+          @include mobile(){
+           height: 28px;
+          }
+        }
+      }
+
+      & :global(.skeleton_sub_txt) {
+        height: 15px;
+        max-width: 775px;
+        width: 40%;
+        margin-bottom: 32px;
+        // background-color: #d3d3d3;
+        @include hd(){
+          margin-bottom: 26px;
+        }
+      }
+
+      & :global(.skeleton_btn){
+        height: 43px;
+        width: 162px;
+      }
+    }
+  }
+}
+
+
+.top_categoryblock_skeleton {
+  padding: 3.75rem 0 0rem;
+
+  @include mobile() {
+    padding: 3.125rem 0 2.375rem;
+  }
+
+  & :global(.top_category_skeleton_grid){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 93px);
+    grid-template-areas:
+      "one three four"
+      "one three four"
+      "one three five"
+      "two three five"
+      "two three five";
+    gap: 12px;
+
+    @include ipad() {
+      grid-template-rows: repeat(auto-fill, 180px);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "one two"
+        "three three"
+        "four five";
+    }
+    // @include ipad() {
+    //   grid-template-rows: repeat(auto-fill, 180px);
+    // }
+    & > :global(.skeleton_category_card){
+      width: 100%;
+      height: 100%;
+      &:nth-child(1) {
+        grid-area: one;
+      }
+      &:nth-child(2) {
+        grid-area: two;
+      }
+      &:nth-child(3) {
+        grid-area: three;
+        height: 471.9px;
+        @include hd(){
+          height: 403px;
+        }
+        @include ipad() {
+          height: 265px;
+        }
+      }
+      &:nth-child(4) {
+        grid-area: four;
+        @include ipad() {
+          height: 260px; 
+        }
+        @include mobile() {
+          height: 180px;
+
+        }
+      }
+      &:nth-child(5) {
+        grid-area: five;
+        @include ipad() {
+          height: 260px; 
+        }
+        @include mobile() {
+          height: 180px;
+        }
+      }
+    }
+  }
+}
+
+
+.product_block_skeleton {
+  padding: 3rem 0 0rem;
+  @include mobile(){
+    padding: 2.375rem 0 3.125rem;
+  }
+
+  & :global(.product_skeleton_grid){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include ipadpro(){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include ipad(){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile(){
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    & > :global(.skeleton_product_card){
+      padding: 4.375rem 1.0625rem 1.875rem 1.0625rem;
+      height: 100%;
+      @include hd(){
+        padding-top: 2.5rem;
+      }
+      @include ipad(){
+        padding: 2.5rem 2.5rem 1.875rem 2.5rem;
+      }
+      &:nth-child(1) {
+        // background-color: rgba(232, 232, 232, 0.35);
+
+        & :global(.img_skeleton){
+          width: 100%;
+          height: 245px;
+          margin-bottom: 19px;
+        }
+        & :global(.desc_skeleton){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & :global(.textcard_num_skeleton){
+            height: 13px;
+            width: 45px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_title_skeleton){
+            height: 16.8px;
+            width: 100%;
+            max-width: 272px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_price_skeleton){
+            height: 19.2px;
+            width: 200px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 20px;
+          }
+          & :global(.textcard_button_skeleton){
+            height: 37px;
+            width: 167px;
+            background-color: rgb(239, 239, 241);
+          }
+        }
+      }
+      &:nth-child(2) {
+        // background-color: rgba(112, 112, 112, 0.02);
+        @include mobile(){
+          display: none;
+        }
+        & :global(.img_skeleton){
+          width: 100%;
+          height: 245px;
+          margin-bottom: 19px;
+        }
+        & :global(.desc_skeleton){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & :global(.textcard_num_skeleton){
+            height: 13px;
+            width: 45px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_title_skeleton){
+            height: 16.8px;
+            width: 100%;
+            max-width: 272px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_price_skeleton){
+            height: 19.2px;
+            width: 200px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 20px;
+          }
+          & :global(.textcard_button_skeleton){
+            height: 37px;
+            width: 167px;
+            background-color: rgb(239, 239, 241);
+          }
+        }
+      }
+      &:nth-child(3) {
+        // background-color: rgba(232, 232, 232, 0.35);
+        @include ipad() {
+          display: none;
+        }
+        & :global(.img_skeleton){
+          width: 100%;
+          height: 245px;
+          margin-bottom: 19px;
+        }
+        & :global(.desc_skeleton){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & :global(.textcard_num_skeleton){
+            height: 13px;
+            width: 45px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_title_skeleton){
+            height: 16.8px;
+            width: 100%;
+            max-width: 272px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_price_skeleton){
+            height: 19.2px;
+            width: 200px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 20px;
+          }
+          & :global(.textcard_button_skeleton){
+            height: 37px;
+            width: 167px;
+            background-color: rgb(239, 239, 241);
+          }
+        }
+      }
+      &:nth-child(4) {
+        // background-color: rgba(112, 112, 112, 0.02);
+        @include ipadpro(){
+          display: none;
+        }
+        & :global(.img_skeleton){
+          width: 100%;
+          height: 245px;
+          margin-bottom: 19px;
+        }
+        & :global(.desc_skeleton){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & :global(.textcard_num_skeleton){
+            height: 13px;
+            width: 45px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_title_skeleton){
+            height: 16.8px;
+            width: 100%;
+            max-width: 272px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 5.5px;
+          }
+          & :global(.textcard_price_skeleton){
+            height: 19.2px;
+            width: 200px;
+            background-color: rgb(239, 239, 241);
+            margin-bottom: 20px;
+          }
+          & :global(.textcard_button_skeleton){
+            height: 37px;
+            width: 167px;
+            background-color: rgb(239, 239, 241);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.brand_block_skeleton{
+  & :global(.brand_carousel_home_skeleton){
+    margin: 2.75rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 98px;
+
+    grid-template-areas:
+      "one two three four five six";
+
+    @include ipadpro(){
+      grid-template-columns: repeat(4, 1fr); 
+      grid-template-areas:
+        "one two three four"; 
+    }
+    @include ipad(){
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-areas:
+        "one one one"
+        "two three four"; 
+    }
+    @include mobile(){
+      padding: 3.125rem 0;
+    }
+  
+    & :global(.brand_side_skeleton){
+      margin-right: 24px;
+      padding-top: 20px;
+      flex-direction: column;
+      @include mobile(){
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: row;
+      }
+    }
+
+    & > :global(.carousel_card_skeleton){
+
+
+      &:nth-child(1){
+        grid-area: one;
+        width: 295px;
+        height: 120px;
+        @include ipad(){
+          height: auto;
+          margin-bottom: 30px;
+          width: 100%;
+        }
+        & :global(.brand_side_title){
+          @include ipad(){
+            margin-bottom: 8px;
+          }
+        }
+      }
+      &:nth-child(2){
+        grid-area: two;
+        width: 100%;
+        height: 120px;
+      }
+      &:nth-child(3){
+        grid-area: three;
+        width: 100%;
+        height: 120px;
+      }
+      &:nth-child(4){
+        grid-area: four;
+        width: 100%;
+        height: 120px;
+      }
+      &:nth-child(5){
+        grid-area: five;
+        width: 100%;
+        height: 120px;
+        @include ipadpro(){
+          display: none;
+        }
+      }
+      &:nth-child(6){
+        grid-area: six;
+        width: 100%;
+        height: 120px;
+        @include ipadpro(){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.testimonial_block_skeleton{
+  padding: 2.75rem 0 5.1rem;
+
+  @include mobile(){
+    padding: 3.125rem 0 4.375rem;
+  }
+  & :global(.testimonial_grid_skeleton){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile() {
+      grid-template-columns: 1fr;
+      justify-items: center; // Center the second card in the grid
+    }
+    
+    & > :global(.testimonial_card_skeleton){
+      max-width: 493px;
+      padding: 7.5rem 5.25rem 5rem 4.375rem;
+      min-height: 327px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      @include ipadpro(){
+        padding: 5rem 3.125rem;
+        min-height: unset;
+      }
+    
+      @include ipad(){
+        padding: 2.5rem 1.875rem;
+      }
+      @include mobile(){
+        min-height: 270px;
+      }
+
+     
+      &:nth-child(2) {
+        width: 100%;
+        grid-column: 2 / 3;  
+        min-height: 364px;     
+        justify-self: center; 
+        align-self: center;
+        display: flex;
+        flex-direction: column; 
+
+        @include ipad(){
+          min-height: 280px;
+        }
+
+        @include mobile(){
+          grid-column: 1 / -1;  
+        }
+
+        & :global(.profile_skeleton){
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          gap: 10px;
+
+          & :global(.img_skeleton){
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+          & :global(.profile_content_skeleton){
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & :global(.profile_name_skeleton){
+              max-width: 170px;
+              width: 100%;
+              height: 20px;
+              border-radius: 20px; 
+            }
+            & :global(.date_skeleton){
+              width: 90px;
+              height: 10px;
+              border-radius: 20px; 
+            }
+          }
+      }
+      & :global(.paragraph_skeleton){
+        height: 85px;
+        border-radius: 20px;
+        width: 100%;
+
+        @include ipad(){
+          height: 75px;
+        }
+      }
+    }
+
+    
+      &:nth-child(1) {
+        width: 100%;
+        align-self: center; 
+        justify-self: center;   
+        backdrop-filter: blur(1px);
+        opacity: 30%;
+        display: flex;
+        flex-direction: column; 
+
+        @include mobile(){
+          display: none;
+        }
+        
+        & :global(.profile_skeleton){
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          gap: 10px;
+
+          & :global(.img_skeleton){
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+          & :global(.profile_content_skeleton){
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & :global(.profile_name_skeleton){
+              max-width: 170px;
+              width: 100%;
+              height: 20px;
+              border-radius: 20px; 
+            }
+            & :global(.date_skeleton){
+              width: 90px;
+              height: 10px;
+              border-radius: 20px; 
+            }
+          }
+      }
+      & :global(.paragraph_skeleton){
+        height: 75px;
+        border-radius: 20px;
+        width: 100%;
+
+        @include ipad(){
+          height: 85px;
+        }
+      }
+      }
+
+      // Style the third card (3rd card)
+      &:nth-child(3) {
+        width: 100%;
+        align-self: center;  // Center vertically
+        justify-self: center; // Align to the left
+        backdrop-filter: blur(1px);
+        opacity: 30%;
+        display: flex;
+        flex-direction: column; 
+
+        @include mobile(){
+          display: none;
+        }
+
+        & :global(.profile_skeleton){
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          gap: 10px;
+
+          & :global(.img_skeleton){
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+          & :global(.profile_content_skeleton){
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & :global(.profile_name_skeleton){
+              max-width: 170px;
+              width: 100%;
+              height: 20px;
+              border-radius: 20px; 
+            }
+            & :global(.date_skeleton){
+              width: 90px;
+              height: 10px;
+              border-radius: 20px; 
+            }
+          }
+      }
+      & :global(.paragraph_skeleton){
+        height: 75px;
+        border-radius: 20px;
+        width: 100%;
+
+        @include ipad(){
+          height: 85px;
+        }
+      }
+      }
+    }
+    
+  }
+}
+
+
+.blog_post_skeleton{
+  margin: 3.125rem 0 0;
+  padding: 3.125rem 0 4.6875rem;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 249, 249, 1) 0%,
+    rgba(165, 165, 165, 1) 47%,
+    rgba(249, 249, 249, 1) 100%
+  );
+  @include mobile() {
+    margin: 2.5rem 0;
+  }
+
+  & :global(.blog_post_container_skeleton){
+    & :global(.grid_skeleton){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 35px;
+      grid-template-areas:
+        "one two"
+        "one three";
+
+      @include mobile() {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "one"
+          "two"
+          "three";
+      }
+
+      & :global(.grid_skeleton_item) {
+        &:global(.item_1){
+          grid-area: one;
+          height: 575px;
+          width: 100%;
+          padding: 0.9375rem;
+          background-color: #fbfbfb;
+          display: grid;
+          grid-template-rows: 1fr;
+
+          @include ipadpro(){
+            height: 541px;
+          }
+          @include ipad(){
+            height: 347.2px;
+          }
+          @include mobile(){
+            height: 150px;
+            grid-template-columns: 120px 1fr;
+            grid-template-rows:auto;
+          }
+
+          & > :global(.blog_img_skeleton){
+            height: 100%;
+            
+            width: 100%;
+            background-color: rgb(239, 239, 241);
+
+            @include hd(){
+              height: 100%;
+                          }
+            @include ipadpro() {
+              height: 100%;
+                          }
+            @include ipad() {
+              height: 100%;
+              
+            }
+            @include mobile(){
+              height: 120px;
+              width: 120px;
+            }
+          }
+
+          & > :global(.blog_content_skeleton){
+            padding: 1.3125rem 1.25rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include ipad() {
+              padding: 0 0.625rem;
+              padding-top: 0.875rem;
+            }
+
+            @include mobile(){
+              padding-top: 0px;
+            }
+
+            & :global(.top_content_skeleton){
+              margin-bottom: 20px;
+
+              @include hd(){
+                margin-bottom: 57px;
+              }
+
+              @include ipadpro(){
+                margin-bottom: 73px;
+              }
+
+              @include ipad(){
+                margin-bottom: 21px;
+              }
+
+              @include mobile(){
+                margin-bottom: 0px;
+              }
+
+              & :global(.date_skeleton){
+                height: 20px;
+                width: 134.25px;
+                background-color: rgb(239, 239, 241);
+                margin-bottom: 13.2px;
+
+                @include ipad(){
+                  height: 15px;
+                  margin-bottom: 8px;
+                }
+              }
+              & :global(.title_skeleton){
+                width: 100%;
+                height: 42px;
+                background-color: rgb(239, 239, 241);
+
+                @include ipad(){
+                  height: 30px;
+                }
+                @include mobile(){
+                  height: 15px;
+                }
+              }
+            }
+
+            & :global(.bottom_content_skeleton){
+              & :global(.profile_skeleton){
+                display: flex;
+                align-items: center;
+                padding-top: 1.25rem;
+                border-top: 1px solid #b6b6b6;
+                gap: 10px;
+
+                & :global(.profile_img_skeleton){
+                  border-radius: 50%;
+                  width: 40px;
+                  height: 40px;
+                  background-color: rgb(239, 239, 241);
+                }
+                & :global(.profile_name_skeleton){
+                  width: 70px;
+                  height: 15px;
+                  background-color: rgb(239, 239, 241);
+                }
+              }
+            }
+
+          }
+        }
+        &:global(.item_2) {
+          grid-area: two;
+          height: 100%;
+          width: 100%;
+          padding: 0.9375rem;
+          background-color: #fbfbfb;
+          display: grid;
+          grid-template-columns: 270px 1fr;
+
+          @include ipadpro(){
+            grid-template-columns: 200px 1fr;
+          }
+          @include ipad(){
+            grid-template-columns: 120px 1fr;
+          }
+
+          @include mobile(){
+            grid-template-columns: 1fr 120px;
+
+            // Change the order in mobile layout
+            & > :global(.blog_img_skeleton) {
+                order: 2; 
+              }
+
+            & > :global(.blog_content_skeleton) {
+                order: 1; 
+              }
+          }
+
+          &> :global(.blog_img_skeleton){
+            background-color: rgb(239, 239, 241);
+
+            @include ipadpro(){
+              height: 200px;
+            }
+            @include ipad(){
+              height: 120px;
+            }
+          }
+
+          & > :global(.blog_content_skeleton){
+            padding: 1.3125rem 1.25rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include ipad() {
+              padding: 0 0.625rem;
+              padding-top: 0px;
+            }
+
+            @include mobile(){
+              padding-top: 0px;
+            }
+
+            & :global(.top_content_skeleton){
+
+              & :global(.date_skeleton){
+                height: 20px;
+                width: 134.25px;
+                background-color: rgb(239, 239, 241);
+                margin-bottom: 13.2px;
+
+                @include ipad(){
+                  height: 15px;
+                  margin-bottom: 8px;
+                }
+              }
+              & :global(.title_skeleton){
+                width: 100%;
+                height: 42px;
+                background-color: rgb(239, 239, 241);
+
+                @include ipad(){
+                  height: 30px;
+                }
+                @include mobile(){
+                  height: 15px;
+                }
+              }
+            }
+
+            & :global(.bottom_content_skeleton){
+              & :global(.profile_skeleton){
+                display: flex;
+                align-items: center;
+                padding-top: 1.25rem;
+                border-top: 1px solid #b6b6b6;
+                gap: 10px;
+
+                & :global(.profile_img_skeleton){
+                  border-radius: 50%;
+                  width: 40px;
+                  height: 40px;
+                  background-color: rgb(239, 239, 241);
+                }
+                & :global(.profile_name_skeleton){
+                  width: 70px;
+                  height: 15px;
+                  background-color: rgb(239, 239, 241);
+                }
+              }
+            }
+
+          }
+        }
+
+        &:global(.item_3) {
+          grid-area: three;
+          height: 100%;
+          width: 100%;
+          padding: 0.9375rem;
+          background-color: #fbfbfb;
+
+          display: grid;
+          grid-template-columns: 270px 1fr;
+
+          @include ipadpro(){
+            grid-template-columns: 200px 1fr;
+          }
+          @include ipadpro(){
+            grid-template-columns: 120px 1fr;
+          }
+
+          &> :global(.blog_img_skeleton){
+            background-color: rgb(239, 239, 241);
+
+            @include ipadpro(){
+              height: 200px;
+            }
+            @include ipad(){
+              height: 120px;
+            }
+          }
+
+          & > :global(.blog_content_skeleton){
+            padding: 1.3125rem 1.25rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include ipad() {
+              padding: 0 0.625rem;
+              padding-top: 0px;
+            }
+
+            @include mobile(){
+              padding-top: 0px;
+            }
+
+            & :global(.top_content_skeleton){
+
+              & :global(.date_skeleton){
+                height: 20px;
+                width: 134.25px;
+                background-color: rgb(239, 239, 241);
+                margin-bottom: 13.2px;
+
+                @include ipad(){
+                  height: 15px;
+                  margin-bottom: 8px;
+                }
+              }
+              & :global(.title_skeleton){
+                width: 100%;
+                height: 42px;
+                background-color: rgb(239, 239, 241);
+
+                @include ipad(){
+                  height: 30px;
+                }
+                @include mobile(){
+                  height: 15px;
+                }
+              }
+            }
+
+            & :global(.bottom_content_skeleton){
+              & :global(.profile_skeleton){
+                display: flex;
+                align-items: center;
+                padding-top: 1.25rem;
+                border-top: 1px solid #b6b6b6;
+                gap: 10px;
+
+                & :global(.profile_img_skeleton){
+                  border-radius: 50%;
+                  width: 40px;
+                  height: 40px;
+                  background-color: rgb(239, 239, 241);
+                }
+                & :global(.profile_name_skeleton){
+                  width: 70px;
+                  height: 15px;
+                  background-color: rgb(239, 239, 241);
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
