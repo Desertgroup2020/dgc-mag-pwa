@@ -1,0 +1,77 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const GridViewIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="26"
+    height="26"
+    viewBox="0 0 29 29"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect
+      x="0.802734"
+      y="0.802979"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="0.802734"
+      y="11.3391"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="0.802734"
+      y="21.8752"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="11.3394"
+      y="0.802979"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="11.3394"
+      y="11.3391"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="11.3394"
+      y="21.8752"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="21.8755"
+      y="0.802979"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="21.8755"
+      y="11.3391"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+    <rect
+      x="21.8755"
+      y="21.8752"
+      width="6.32165"
+      height="6.32165"
+      fill="#7E8B53"
+    />
+  </svg>
+);
+export default GridViewIcon;
