@@ -1,0 +1,75 @@
+@import "../../../styles/variables.scss";
+
+.register {
+  & :global(.banner) {
+    min-height: 170px;
+    background: url(../../../../public/assets/images/register-banner.jpg)
+      no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & :global(.container) {
+      max-width: 590px;
+      margin: 0 auto;
+
+      @include fromIpad() {
+        padding: 0;
+      }
+    }
+
+    h1 {
+      color: #fff;
+    }
+  }
+  // &:global(.whole_sale_register){
+    
+  //   & :global(.banner){
+  //     h1{
+  //       color: inherit;
+  //     }
+  //     background: #e9e9e9;
+  //   }
+  // }
+}
+.registration_client {
+  padding: 3.75rem 0 5rem;
+  max-width: 590px;
+  margin: 0 auto;
+
+  form {
+    &:global(.signup) {
+      & :global(.terms) {
+        // font-size: 1rem;
+        color: #444;
+        margin-bottom: 1.5625rem;
+        a {
+          font-weight: var(--weight_bold);
+        }
+      }
+      & :global(.phone_wrap) {
+        position: relative;
+        & :global(.otp_btns) {
+          position: absolute;
+          right: 20px;
+          top: 15px;
+          button {
+            color: var(--card-foreground);
+            font-size: 1.125rem;
+            font-weight: var(--weight_bold);
+          }
+        }
+      }
+    }
+  }
+  & :global(.no_account) {
+    margin-top: 1.25rem;
+    p {
+      font-size: 0.875rem;
+      font-weight: var(--weight_semi);
+
+      a {
+        color: var(--popover-foreground);
+      }
+    }
+  }
+}
