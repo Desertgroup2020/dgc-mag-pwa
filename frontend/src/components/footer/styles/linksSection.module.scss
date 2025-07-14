@@ -1,0 +1,49 @@
+@import "../../../styles/variables.scss";
+
+.link_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & :global(.useful_link_section) {
+    display: flex;
+    flex-direction: column;
+    & :global(.title) {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    & :global(.arrow_change){
+      rotate: 180deg;
+    }
+    & :global(.useful_links_dropdown_section) {
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      & :global(.category_name) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  & :global(.category_link_section) {
+    display: flex;
+    flex-direction: column;
+    & :global(.title) {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    & :global(.arrow_change){
+      rotate: 180deg;
+    }
+    & :global(.category_links_dropdown_section) {
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      & :global(.category_name) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
