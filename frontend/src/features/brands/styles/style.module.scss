@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.brand_page {
+  & :global(.banner) {
+    min-height: 170px;
+    background: url(../../../../public/assets/images/register-banner.jpg)
+      no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & :global(.container) {
+      max-width: 690px;
+      margin: 0 auto;
+
+      @include fromIpad() {
+        padding: 0;
+      }
+    }
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  & :global(.brand_client){
+    padding: 2.8125rem 0 3.75rem;
+
+    & :global(.brand_lister){
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        & > :global(.brand_item){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: calc(100% / 5);
+            flex-basis: calc(100% / 5);
+            padding: 0 15px;
+            margin-bottom: 15px;
+
+            @include ipad(){
+                max-width: calc(100% / 4);
+            flex-basis: calc(100% / 4);
+            }
+            @include mobile(){
+                max-width: calc(100% / 2);
+            flex-basis: calc(100% / 2);
+            }
+        }
+    }
+  }
+}
