@@ -1,0 +1,176 @@
+@import "../../../styles//variables.scss";
+
+.wishlist_item {
+    position: relative;
+    padding: 24px;
+    border: 1px solid #d5d5d5;
+    // margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 80px;
+  
+    @include hd() {
+      padding: 18px;
+      gap: 0;
+    }
+    @include mobile(){
+      flex-direction: column;
+    }
+  
+    & :global(.lister) {
+      display: flex;
+      gap: 2.5rem;
+  
+      @include hd() {
+        gap: 1.25rem;
+      }
+  
+      @include ipad() {
+        gap: 1rem;
+        max-width: 60%;
+        flex-basis: 60%;
+        align-items: center;
+      }
+      @include mobile(){
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+  
+      & :global(.product_cart_image) {
+        & :global(img) {
+          height: 100px;
+          object-fit: cover;
+          width: 100px;
+          object-position: top;
+  
+        }
+      }
+  
+      & :global(.product_cart_details) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        @include ipad() {
+          gap: 0.5rem;
+        }
+  
+        & :global(.txt_cnt) {
+          & > h4 {
+            font-size: 1.125rem;
+            font-weight: var(--weight_regular);
+            line-height: 1.3713rem;
+            max-width: 30ch;
+  
+            @include ipad() {
+              max-width: 25ch;
+            }
+            @include mobile(){
+              font-size: 14px;
+            }
+          }
+        }
+        & :global(.price) {
+          & :global(.final_price) {
+            font-size: 1.0625rem;
+            font-weight: var(--weight_semi);
+            line-height: 1.295rem;
+          }
+        }
+        & :global(.product_cart_label_1) {
+          & > p {
+            font-size: 1rem;
+            font-weight: var(--weight_medium);
+            line-height: 1.2188rem;
+            color: var(--medium_gray);
+          }
+        }
+        & :global(.details_list) {
+          display: inline-block;
+          border: 1px solid #cbcbcb;
+          padding: 12px;
+  
+          font-family: var(--font_Roboto);
+          font-size: 0.875rem;
+          font-weight: var(--weight_regular);
+          line-height: 1.0256rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+        & :global(.quantity) {
+          & :global(.cntrls) {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #d5d5d5;
+  
+            & :global(span) {
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 1;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 50px;
+              height: 50px;
+            }
+  
+            & :global(.cart_btn) {
+              padding: 0;
+              width: 50px;
+              height: 50px;
+              font-size: 24px;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              &:first-child {
+                border-right: 1px solid #d5d5d5;
+              }
+              &:last-child {
+                border-left: 1px solid #d5d5d5;
+              }
+            }
+          }
+        }
+      }
+    }
+    & :global(.cart_cruds) {
+      gap: 24px;
+      display: flex;
+  
+      @include hd() {
+        gap: 18px;
+      }
+  
+      @include mobile(){
+        flex-direction: row !important;
+        width: 100%;
+        margin-top: 0.9375rem;
+      }
+  
+      & :global(button) {
+        border: 1px solid #d5d5d5;
+        padding: 8px 16px;
+        text-transform: uppercase;
+  
+        font-size: 0.875rem;
+        font-weight: var(--weight_semi);
+        line-height: 1.0669rem;
+        color: var(--medium_gray);
+  
+        @include hd() {
+          font-size: 0.625rem;
+        }
+        @include mobile(){
+          width: 100%;
+        }
+      }
+    }
+  }
