@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+.bread_crumbs {
+  display: flex;
+  @include ipad() {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+
+  & > li {
+    display: flex;
+    align-items: flex-start;
+    @include ipad() {
+      float: left;
+    }
+    & :global(.crumb_link) {
+      font-size: 0.775rem;
+      color: #b0b0b0;
+      font-weight: var(--weight_semi);
+
+      @include mobile() {
+        font-size: 0.625rem;
+      }
+    }
+    &::after {
+      content: "/";
+      color: #777777;
+      font-weight: var(--weight_semi);
+      margin: 0 0.625rem;
+
+      @include hd() {
+        font-size: 0.75rem;
+      }
+      @include mobile() {
+        font-size: 0.625rem;
+      }
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    &:global(.active) {
+      & :global(.crumb_link) {
+        color: #101010;
+      }
+    }
+    a:hover {
+      color: var(--popover-foreground);
+    }
+  }
+}
