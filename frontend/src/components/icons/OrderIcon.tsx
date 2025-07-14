@@ -1,0 +1,29 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const OrderIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width={props.width || "10"}
+    height={props.height || "9"}
+    viewBox="0 0 10 9"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M9 0H1C0.45 0 0 0.45 0 1V8C0 8.55 0.45 9 1 9H9C9.55 9 10 8.55 10 8V1C10 0.45 9.55 0 9 0ZM9 8H1V1H9V8Z"
+      fill={props.fill || "#A5A5A5"}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M8.705 3.71L7.995 3L6.41 4.585L5.705 3.875L5 4.58L6.41 6L8.705 3.71Z"
+      fill={props.fill || "#A5A5A5"}
+    />
+    <path d="M4 2H1.5V3H4V2Z" fill={props.fill || "#A5A5A5"} />
+    <path d="M4 4H1.5V5H4V4Z" fill={props.fill || "#A5A5A5"} />
+    <path d="M4 6H1.5V7H4V6Z" fill={props.fill || "#A5A5A5"} />
+  </svg>
+);
+export default OrderIcon;
