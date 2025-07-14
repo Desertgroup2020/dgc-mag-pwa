@@ -1,0 +1,115 @@
+@import "../../../styles/variables.scss";
+
+.prouct_block {
+  padding: var(--hom_sec_top_padding) 0 var(--hom_sec_btm_padding);
+
+    // @include mobile(){
+    //   padding: 2.375rem 0 3.125rem;
+    // }
+  & :global(.product_carousel) {
+    & :global(.controls){
+        margin-top:1rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        & :global(.nav){
+          max-width: 1.1875rem;
+          transition: 0.3s ease;
+          &:disabled{
+            max-width: 1rem;
+          }
+            &:first-child{
+                margin-right: 1.875rem;
+            }
+            svg{
+                stroke: #4C4C4C;
+            }
+        }
+    }
+  }
+}
+
+.hm_product_card {
+  //   max-width: 377px;
+  padding: 4.375rem 1.0625rem 1.875rem 1.0625rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  @include hd(){
+    padding-top: 2.5rem;
+  }
+  @include ipad(){
+    padding: 2.5rem 2.5rem 1.875rem 2.5rem;
+  }
+
+  & > figure {
+    margin-bottom: 3.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      margin: auto;
+    }
+  }
+  & > :global(.content_area) {
+    text-align: center;
+    & > :global(.sku) {
+      color: #848484;
+      margin-bottom: 0.5em;
+    }
+    & > h4 {
+      margin-bottom: 0.4em;
+    }
+    & > :global(.price) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.25rem;
+
+      & > :global(.special) {
+        color: #848484;
+        margin-right: 0.1875rem;
+      }
+    }
+  }
+  & > :global(.action_grup) {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    & > :global(.icon) {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background-color: #efefef;
+      border-radius: 50%;
+      margin-bottom: 0.75rem;
+      transform: translateX(calc(100% + 20px));
+      &:global(.wishlist) {
+        transition: 0.2s ease-in-out;
+      }
+      &:global(.backlog) {
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &:hover {
+    & > :global(.action_grup) {
+      & :global(.icon) {
+        transform: translateX(0);
+      }
+    }
+  }
+  &:global(.item_odd){
+    background-color: rgba($color: #E9E9E9, $alpha: 35%);    
+    
+  }
+  &:global(.item_even){
+    background-color: rgba($color: #6F6F6F, $alpha: 2%);
+  }
+}
