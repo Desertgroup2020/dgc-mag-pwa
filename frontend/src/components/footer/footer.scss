@@ -1,0 +1,279 @@
+.footer_container {
+  flex-wrap: wrap;
+  background-color: #F8F8F8;
+  @media screen and (max-width:991px){
+    display: none;
+  }
+}
+
+.static_block_container {
+  padding: 1.6rem 0rem;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  @media screen and (max-width:991px){
+    display: none;
+  }
+  .shipping_container {
+    
+    
+  }
+  .personalize_container {
+    // padding: 0rem 6rem;
+    // @media screen and (min-width: 1300px) and (max-width: 1550px) {
+    //   padding: 0rem 4rem;
+    // }
+    // @media screen and (min-width: 991px) and (max-width: 1299px){
+    //   padding: 0rem 2rem;
+    // }
+  }
+  .discount_container {
+   
+  }
+  .block_wrapper_shipping {
+   
+  }
+  .block_wrapper_personalize {
+    // padding: 0.5rem 4rem;
+    // max-width: 385px;
+    // width: 100%;
+    // @media screen and (min-width: 992px) and (max-width: 1550px) {
+    //   padding: 0.5rem 1rem 0.5rem 3rem;
+    // }
+  }
+  .block_wrapper_discounts {
+    // padding: 0.5rem 4rem;
+    max-width: 380px;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      // padding: 0.5rem 1rem 0.5rem 3rem;
+    }
+  }
+  .text_wrapper {
+    // width: 150px;
+    .block_text {
+      @apply font-600;
+      font-size: 0.875rem;
+    }
+    .block_text_desc {
+      font-size: 0.7rem;
+      @apply font-500;
+      max-width: 220px;
+    }
+  }
+}
+
+.bottom_footer_wrapper {
+  // padding-left: 13rem;
+  .bottom_footer_inner_wrapper {
+    flex-wrap: wrap;
+    // border-top: 1px solid lightgrey;
+  }
+}
+
+.logo_container {
+  gap: 3rem;
+  flex-wrap: wrap;
+  @media screen and (min-width: 992px) and (max-width: 1550px) {
+    gap: 3rem;
+  }
+  .logo_wrapper{
+    gap: 1.3rem; 
+    align-items: flex-start;
+    flex-shrink: 0;
+    
+    // @media screen and (min-width: 992px) and (max-width: 1550px) {
+    //   gap: 1.5rem;
+    // }
+  }
+  .address_wrapper {
+    .address_section{
+      gap:0.6rem;
+      justify-content: flex-start;
+      align-items: center;
+      // @media screen and (min-width: 992px) and (max-width: 1550px){
+      //   gap: 1.5rem
+      // }
+      .address_text {
+        font-size: 0.7rem;
+        @apply font-500;
+        color: #4D4D4D;
+      }
+    }
+  }
+  .payment_texts {
+    font-size: 0.875rem;
+    color: #444444;
+    @apply font-500;
+  }
+  .mastercard_img {
+    object-fit: contain;
+  }
+  .visa_img {
+    object-fit: contain;
+  }
+  .apps_section {
+    margin-top: 2rem;
+    .appstore_img {
+      object-fit: contain;
+    }
+  }
+  .rights_section {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    .rights_text {
+      font-size: 0.75rem;
+      color: #a3a3a3;
+    }
+  }
+}
+
+.footer_content_container {
+  width: 65%;
+  border-top: 1px solid lightgrey;
+  padding-top: 4rem;
+  padding-right:3rem;
+  gap: 4rem;
+  @media screen and (min-width: 1300px) and (max-width: 1550px){
+    gap: 3rem;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1299px){
+    gap: 1rem;
+  }
+  .links_wrapper {
+    gap: 3rem;
+    // padding-top:0.5rem;
+    @media screen and (min-width: 1300px) and (max-width: 1550px) {
+      gap: 3rem;
+      
+    }
+    @media screen and (min-width: 992px) and (max-width: 1299px){
+      gap: 1rem;
+    }
+    @media screen and (min-width:1600px){
+      padding-top: 0.5rem;
+    }
+  }
+  .links_title {
+    @apply font-600;
+    font-size: 0.875rem;
+    color: #444444;
+  }
+  .label_text {
+    font-size: 0.875rem;
+    color: #4D4D4D;
+    @include hd(){
+      font-size: .75rem;
+    }
+    &:hover{
+      color:#7E8B53;
+    }
+  }
+}
+
+.newsletter_block_container {
+  width: 35%;
+  height: 100%;
+  position: relative;
+  .newsletter_inner_block {
+    background-image: url(/assets/images/footer_image.png);
+    background-size: cover;
+    // background-position: left top;
+    width: 140%;
+    background-repeat: no-repeat;
+    min-height: 640px;
+    padding-top: 4rem;    
+
+    @media (max-width: 1600px){
+      min-height: 550px;
+    }
+    @media (max-width: 1199px){
+      // min-height: 640px;
+      background-position: 0 top;
+      background-size: cover;
+    }
+    @media screen and (min-width:1600px){
+      padding-top: 4.4rem;
+    }
+
+    .newsletter_title {
+      @apply font-600;
+      font-size: 0.875rem;
+      color: #444444
+    }
+    .newsletter_desc {
+      @apply font-400;
+      font-size: 0.875rem;
+      color: #4D4D4D;
+    }
+    .input_wrapper {
+      .newsletter_input {
+        outline: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        width: 300px;
+        border: 1px solid #A5A5A5;
+        padding: 0.4rem 1rem;
+        padding-left: 1.2rem;
+        font-size: 0.875rem;
+        background-color: transparent;
+        @media screen and (min-width: 992px) and (max-width: 1299px){
+          max-width: 225px;
+          width:100%;
+        }
+      }
+      .newsletter_button {
+        padding: 0.4rem 2rem;
+        background: #7e8b53;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-size: 0.875rem;
+        color: #fff;
+      }
+    }
+    .scrol_top{
+      display: flex;
+      align-items: center;
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      z-index: 4;
+      &.hidden{
+        display: none;
+      }
+      .txt{
+        color: var(--popover-foreground);
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      & >button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background-color: rgba($color: #D9D9D9, $alpha: 0.70);
+        margin-left: .875rem;        
+        & > svg{
+          transform: rotate(-90deg);
+          opacity: 0.5;
+          width: 19px;
+          height: 19px;
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      &:hover{
+        .txt{
+          opacity: 1;
+        }
+        &>button{
+          svg{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
