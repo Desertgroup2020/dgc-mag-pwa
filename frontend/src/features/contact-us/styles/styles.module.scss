@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+
+.contact_us {
+  & :global(.banner) {
+    min-height: 170px;
+    background: url(../../../../public/assets/images/register-banner.jpg)
+      no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & :global(.container) {
+      max-width: 690px;
+      margin: 0 auto;
+
+      @include fromIpad() {
+        padding: 0;
+      }
+    }
+
+    h1 {
+      color: #fff;
+    }
+  }
+  & :global(.map_block){
+    & :global(.map_iframe){
+        height: 430px;
+        width: 100%;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+        & :global(.map_underlying_txt){
+            font-size: .875rem;
+            font-weight: var(--weight_medium);
+            margin-top: 1.875rem;
+        }
+    }
+  }
+  
+}
+
+.contact_contents{
+    padding: 2.8125rem 0 3.75rem;
+
+    @include ipad(){
+        padding-bottom: 8.125rem;
+    }
+    & :global(.divider){
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -2.5rem;
+
+        &>div{
+            max-width: 50%;
+            flex-basis: 50%;
+            padding: 0 2.5rem;
+
+            @include ipad(){
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+}
