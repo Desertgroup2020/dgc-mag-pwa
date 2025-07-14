@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.hot_section {
+  position: relative;
+  button {
+    display: none;
+  }
+
+  &:hover {
+    button {
+      display: block;
+    }
+  }
+  & :global(.mapping) {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 30%;
+  }
+}
