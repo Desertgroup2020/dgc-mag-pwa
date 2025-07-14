@@ -1,0 +1,12 @@
+overwrite: true
+schema: "https://api.dubaigardencentre.cmxdev.com/graphql"
+documents: null # Specify the location of your GraphQL documents
+generates:
+  src/generated/types.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-operations"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
