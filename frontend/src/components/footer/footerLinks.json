@@ -1,0 +1,62 @@
+{
+  "UsefulLinks": [
+    {
+      "href": "/privacy-policy",
+      "target": "",
+      "label": "Privacy policy"
+    },
+    {
+      "href": "/delivery-returns-policy",
+      "target": "",
+      "label": "Returns"
+    },
+    {
+      "href": "/terms-conditions",
+      "target": "",
+      "label": "Terms & conditions"
+    },
+    {
+      "href": "/contact-us",
+      "target": "",
+      "label": "Contact us"
+    },
+    {
+      "href": "/faq",
+      "target": "",
+      "label": "FAQ"
+    },
+    {
+      "href": "/wholesale-register",
+      "target": "",
+      "label": "Wholesale registration"
+    }
+  ],
+
+  "CategoryLinks": [
+    {
+      "href": "/",
+      "target": "",
+      "label": "Special offers"
+    },
+    {
+      "href": "/statues-and-ornaments.html",
+      "target": "",
+      "label": "Statue & ornaments"
+    },
+    {
+      "href": "/garden-care/watering-and-irrigation.html",
+      "target": "",
+      "label": "Water features"
+    },
+    {
+      "href": "/outdoor-plants.html",
+      "target": "",
+      "label": "Outdoor plants"
+    },
+    {
+      "href": "/indoor-plants.html",
+      "target": "",
+      "label": "Indoor plants"
+    }
+  ]
+}
