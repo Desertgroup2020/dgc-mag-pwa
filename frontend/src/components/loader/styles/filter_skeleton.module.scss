@@ -1,0 +1,105 @@
+@import "../../../styles/variables.scss";
+
+
+.filter_skeleton {
+  max-width: 316px;
+  padding: 0px;
+
+  @include ipadpro(){
+    padding: 0px 15px;
+    display: none;
+  }
+
+  & :global(.price_filter_skeleton){
+    padding: 0 0 2.188rem 0;
+    border-bottom: 1px solid #e4e4e4;
+
+    & :global(.price_title_skeleton){
+      height: 26px;
+      width: 70%;
+      background-color: #e5e7eb;
+      margin-bottom: 1.938rem;
+    }
+
+
+    & :global(.content_skeleton){
+      width: 100%;
+      height: 73px;
+      gap: 40px;
+      background-color: #e5e7eb;
+
+    }
+  }
+
+
+  & :global(.color_filter_skeleton){
+    padding: 2.188rem 0;
+    border-bottom: 1px solid #e4e4e4;
+
+    & :global(.color_title_skeleton){
+      height: 26px;
+      width: 70%;
+      background-color: #e5e7eb;
+      margin-bottom: 1.938rem;
+    }
+
+
+    & :global(.color_tile_skeleton){
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+
+      & :global(.individual_tile_skeleton){
+        height: 28px;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 28px 1fr;
+        gap: 15px;
+
+        & :global(.round_skeleton){
+          height: 100%;
+          width: 28px;
+          background-color: #e5e7eb;
+          // border-radius: 50%;
+        }
+
+        & :global(.content_skeleton){
+          width: 100%;
+          background-color: #e5e7eb;
+          height: 100%;
+        }
+      } 
+
+    }
+  }
+
+  & :global(.category_filter_skeleton){
+    padding: 2.188rem 0;
+    border-bottom: 1px solid #e4e4e4;
+
+    & :global(.catogory_title_skeleton){
+      height: 26px;
+      width: 70%;
+      background-color: #e5e7eb;
+      margin-bottom: 1.938rem;
+    }
+
+
+    & :global(.category_content_skeleton){
+      width: 100%;
+      gap: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & :global(.block_tile){
+        height: 45px;
+        width: 100%;
+        background-color: #e5e7eb;
+      }
+    }
+  }
+
+}
