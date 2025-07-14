@@ -1,0 +1,17 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ListViewIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="26"
+    height="24"
+    viewBox="0 0 26 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect width="25.2866" height="2.10722" fill="#C6C6C6" />
+    <rect y="10.5361" width="25.2866" height="2.10722" fill="#C6C6C6" />
+    <rect y="21.072" width="25.2866" height="2.10722" fill="#C6C6C6" />
+  </svg>
+);
+export default ListViewIcon;
