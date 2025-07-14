@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.main_pagination{
+    padding: 1.875rem 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    & :global(.pagination-button){
+        width: 32px;
+        height: 32px;
+        background-color: var(--popover-foreground);
+    }
+}
