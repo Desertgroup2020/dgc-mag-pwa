@@ -1,0 +1,50 @@
+@import "../../../styles/variables.scss";
+
+.header_login {
+  display: flex;
+  align-items: center;
+
+  & :global(.wholesale_icon_section) {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right-width: 2px;
+    & :global(.wholesale_icon_text) {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+  }
+  & :global(.login_btn), & :global(.account_btn) {
+    // padding-left: 1rem;
+    button,
+    a {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0 1.875rem;
+      line-height: 38px;
+      min-width: 116px;
+      height: 38px;
+      border-radius: 30px;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      color: var(--input);
+      text-align: center;
+
+      @include hd() {
+        min-width: 90px;
+        padding: 0 0.9375rem;
+      }
+      span {
+        line-height: 1;
+      }
+    }
+  }
+
+  & > div {
+    &:last-child {
+      border: 0;
+    }
+  }
+}
