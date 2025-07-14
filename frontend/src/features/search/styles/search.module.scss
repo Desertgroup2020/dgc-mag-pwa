@@ -1,0 +1,42 @@
+@import "../../../styles/variables.scss";
+
+.search_section {
+  & :global(.search_input_wrapper) {
+    display: flex;
+    position: relative;
+    align-items: center;
+    // margin: 0rem 3rem;
+    & :global(.input_field) {
+      padding-left: 1rem;
+      padding-right: 5.625rem;
+      width: 420px;
+      height: 45px;
+      font-size: 0.875rem;
+      border-radius: 25px;
+      border: 1px solid #bebebe;
+      outline: none;
+      &::placeholder {
+        @include hd() {
+          font-size: 0.75rem;
+        }
+      }
+      @include hd() {
+        width: 300px;
+      }
+      @include small() {
+        width: 300px;
+      }
+    }
+    & :global(.search_button) {
+      font-size: 0.875rem;
+      font-weight: 500;
+      background-color: #7e8b53;
+      position: absolute;
+      right: 8px;
+      width: 80px;
+      height: 32px;
+      border-radius: 20px;
+      color: #fff;
+    }
+  }
+}
