@@ -1,0 +1,93 @@
+@import "../../../styles/variables.scss";
+
+.blog_posts_lister {
+  & :global(.banner) {
+    min-height: 170px;
+    background: url(../../../../public/assets/images/register-banner.jpg)
+      no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & :global(.container) {
+      max-width: 690px;
+      margin: 0 auto;
+
+      @include fromIpad() {
+        padding: 0;
+      }
+    }
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  & :global(.blogs_wrapper) {
+    padding: 2.5rem 0 3.125rem;
+    & :global(.blog_lister) {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.875rem;
+
+      @include mobile() {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+.blog_details {
+  padding: 2.5rem 0 3.75rem;
+  & :global(.divider) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    & > div {
+      flex-basis: calc(100% / 2);
+      max-width: calc(100% / 2);
+      padding: 0 15px;
+
+      @include ipad(){
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  & :global(.details) {
+    @include ipad(){
+      margin-top: 1.25rem;
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    & :global(.date) {
+      background-color: rgba(126, 139, 83, 0.32);
+      font-size: 1.125rem;
+      line-height: 1;
+      display: inline-block;
+      padding: 0.25rem 0.625rem;
+      color: #5b5b5b;
+      border-radius: 32px;
+      margin-bottom: 1.1em;
+
+      @include mobile(){
+        font-size: .875rem;
+      }
+    }
+    & :global(.txt){
+      p{
+        margin-bottom: 1em;
+      }
+      ol, ul{
+        &>li{
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+  & :global(.back_to){
+    margin-bottom: 1.875rem;
+  }
+}
